@@ -23,7 +23,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1;
+            z-index: 10;
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             background: #ffffff1f;
@@ -85,7 +85,7 @@
             width: 7rem;
             height: 7rem;
             border: none;
-            animation: img 2s linear infinite;
+            /* animation: img 2s linear infinite; */
         }
         .bg-img .waves {
             position: relative;
@@ -173,6 +173,26 @@
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             background: linear-gradient(to right, rgba(168,237,234,1), rgba(254,214,227,1))
         }
+
+        #heartbeat{
+            /* background-image: url(https://img2.baidu.com/it/u=337029060,1243666823&fm=253&fmt=auto&app=138&f=JPEG?w=589&h=500); */
+            height: 100px;
+            width: 100px;
+            background-size: cover;
+            animation: myAnimation 1.5s infinite;
+            /* position: absolute; */
+        }
+        @keyframes myAnimation {
+            0% {
+                scale: 1;
+            }
+            50% {
+                scale: 0.7;
+            }
+            100% {
+                scale: 1;
+            }
+        }
     </style>
 </head>
 </head>
@@ -204,7 +224,7 @@
                             </div>
                             <div>
                                 <div class="love-icon opacity-75 my-5">
-                                    <img src="./assets/img/favicon.png" alt="">
+                                    <img id="heartbeat" src="./assets/img/favicon.png" alt="">
                                 </div>
                                 <p class="align-bottom">— 1821.023公里 —</p>
                             </div>
@@ -241,7 +261,14 @@
                     <div class="row">
                         <div class="col position-relative">
                             <div class="p-3 text-center">
-                                <h3 class="text-gradient text-primary opacity-50">我们一起走过</h3>
+                                <h3 class="text-gradient text-primary opacity-50">我们相识</h3>
+                                <div class="time mt-4">
+                                    <b id="day0" class="mx-2" style="font-size: x-large;">∞</b>天
+                                    <b id="hour0"  class="mx-2" style="font-size: x-large;">23</b>时 
+                                    <b id="minute0"  class="mx-2" style="font-size: x-large;">59</b>分 
+                                    <b id="second0" class="mx-2" style="font-size: x-large;">59</b>秒 
+                                </div>
+                                <h3 class="text-gradient text-primary opacity-50 mt-3">革命友谊升华了</h3>
                                 <div class="time mt-4">
                                     <b id="day" class="mx-2" style="font-size: xx-large;">∞</b>天
                                     <b id="hour"  class="mx-2" style="font-size: xx-large;">23</b>时 
@@ -258,14 +285,14 @@
     </section>
 
     <div class="container my-5">
-        <div class="row">
+        <!-- <div class="row">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-6">
-                    <!-- <h2 class="text-primary text-gradient" style="font-size: 3.5rem;">Events Calendar</h2> -->
+                    <h2 class="text-primary text-gradient" style="font-size: 3.5rem;">Events Calendar</h2>
                     <h2 class="text-gradient text-primary opacity-50">感情日历</h2>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row mt-sm-5 mt-3" id="calendar">
         </div>
     </div>
@@ -279,24 +306,40 @@
                 </div>
             </div>
         <div class="row">
-            <div class="card col-8 mx-auto shadow-0">
-                <div class="little_texts pt-4 pb-2  text-center">
-                    <div class="top-title">
-                        一夜难眠，关于未来又重新思考了很久<br>
-                        最后我揣着硬币去问了易经，也是第一次亲自卜卦<br>
-                        沐浴、更衣、选好音乐，看着硬币在桌面上翻转、停滞<br>
-                        记好顺序，翻出易经，一条条寻到咸卦<br>
-                        看到卦辞，愕然，自问科学真的存在吗<br><br>
-                        <div class="row d-flex flex-wrap align-items-center">
-                            <div class="col-md-2"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Yijing-31.png"></div>
-                            <div class="col-md-10"><cite>咸者，感也。柔上而剛下，二氣感應以相與，<br>止而說，男下女，是以亨利貞，取女吉也。<br>天地感而萬物化生，聖人感人心而天下和平；<br>觀其所感，而天地萬物之情可見矣！</cite></div>
-                          </div>
-                        
-                    </div>
-                    <div class="info py-2">
-                        <p class="text-secondary">Date: 2023-01-22</p>
-                    </div>
+            <div class="card text-center col-8 mx-auto shodow-6-strong mb-4">
+                <div class="card-header"><h5>一话开天</h5></div>
+                <div class="card-body">
+                  <h6 class="card-title">故事从这里开始</h6>
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Button</a> -->
+                  <img class="mt-2 shadows-6-strong img-fluid rounded" src="assets/img/pass.png"/>
                 </div>
+                <div class="card-footer text-muted">Date: 2018-11-15</div>
+            </div>
+
+            <div class="card text-center col-8 mx-auto shodow-6-strong mb-4">
+                <div class="card-header"><h5>王车易位</h5></div>
+                <div class="card-body">
+                  <!-- <h5 class="card-title">故事从这里开始</h5> -->
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Button</a> -->
+                  <h6>
+                    一夜难眠，关于未来又重新思考了很久<br>
+                    最后我揣着硬币去问易经，也是第一次亲手卜卦<br>
+                    沐浴、更衣、选好音乐，看着硬币在桌面上翻转、停滞<br>
+                    记好顺序，对着易经，一条条寻到咸卦<br>
+                    看到卦辞，愕然，月老红娘，请把我家里监控拆掉，谢谢<br><br>
+                  </h6>
+                  <div class="row d-flex flex-wrap align-items-center">
+                    <div class="col-md-4 text-right">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Yijing-31.png">
+                    </div>
+                    <div class="col-md-6">
+                        <cite>咸者，感也。柔上而剛下，二氣感應以相與，<br>止而說，男下女，是以亨利貞，取女吉也。<br>天地感而萬物化生，聖人感人心而天下和平；<br>觀其所感，而天地萬物之情可見矣！</cite>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer text-muted">Date: 2023-01-22</div>
             </div>
         </div>
     </div>
@@ -317,15 +360,43 @@
 
 
     <script type="text/javascript">
+        const knownTime = new Date("2018-11-15T23:06:15-04:00")
         // UTC Tokyo 23.01.22 10:19 "你觉得异国没关系那就可以" 01,19
-        const togetherTime = new Date("2023-01-22T10:19:00+09:00")
+        const togetherTime = new Date("2023-01-22T10:19:28+09:00")
 
         function updateTime(){
             // 每秒更新时间
             var nowTime = new Date();
 
-            var delta = Math.abs(nowTime - togetherTime) / 1000;
+            var delta0 = Math.abs(nowTime - knownTime) / 1000;
 
+            // calculate (and subtract) whole days
+            var days0 = Math.floor(delta0 / 86400);
+            delta0 -= days0 * 86400;
+
+            // calculate (and subtract) whole hours
+            var hours0 = Math.floor(delta0 / 3600) % 24;
+            delta0 -= hours0 * 3600;
+
+            // calculate (and subtract) whole minutes
+            var minutes0 = Math.floor(delta0 / 60) % 60;
+            delta0 -= minutes0 * 60;
+
+            // what's left is seconds
+            var seconds0 = Math.floor(delta0 % 60);  // in theory the modulus is not required
+
+            var htmlD0 = document.getElementById('day0'); 
+            var htmlH0 = document.getElementById('hour0'); 
+            var htmlM0 = document.getElementById('minute0'); 
+            var htmlS0 = document.getElementById('second0'); 
+
+            htmlD0.innerHTML = days0;
+            htmlH0.innerHTML = hours0;
+            htmlM0.innerHTML = minutes0;
+            htmlS0.innerHTML = seconds0;
+
+
+            var delta = Math.abs(nowTime - togetherTime) / 1000;
             // calculate (and subtract) whole days
             var days = Math.floor(delta / 86400);
             delta -= days * 86400;
